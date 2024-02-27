@@ -1,0 +1,20 @@
+<h1><%= @place["name"] %> </h1>
+
+<form action="/entries" method="post">
+    <p>
+      <label for="activity_name"> Activty_Name </label>
+      <input type="text" name="activity_name" id="activity_name">
+    <p>
+    <p>
+      <label for="activity_date"> Activty_Date </label>
+      <input type="date" name="activity_date" id="activity_date">
+    <p>
+    <p>
+      <label for="activity_description"> Activty_Description </label>
+      <input type="text" name="activity_description" id="activity_description">
+    <p>
+    <p>
+      <input type="hidden" name="place_id" id="place_id" value="<%= params["place_id"]%>">
+    </p>
+  <button>Submit</button>
+</form>

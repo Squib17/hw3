@@ -7,10 +7,11 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find_by({"id" => params["id"]})
+    #Find entries of that place
+    @entries = Entry.where({"place_id" => @place["id"]})
   end
 
   def new
-    @place = Place.new
     # render new view with new Place form
   end
 
